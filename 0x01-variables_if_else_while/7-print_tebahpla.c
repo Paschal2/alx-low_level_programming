@@ -1,14 +1,17 @@
 #include <stdio.h>
 /**
- * main - A program that prints lowercase in reverse
+ * main - Entry point
  * Return: Always 0 (Success)
  */
+
 int main(void)
 {
-	char alphabet;
+	char alpha;
 
-	for (alphabet = 'z'; alphabet <= 'a'; alphabet++)
-	putchar(alphabet);
+	for (alpha = 'z'; alpha >= 'a'; alpha++)
+	{
+		putchar(alpha);
+	}
 	putchar('\n');
 
 	return (0);
