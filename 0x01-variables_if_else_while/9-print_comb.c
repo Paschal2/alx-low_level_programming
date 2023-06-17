@@ -6,12 +6,14 @@
 
 int main(void)
 {
-	int c;
+	int digit;
 
-	for (c = '0'; c <= '9'; c++)
+	for (digit = '0'; digit <= '9'; digit++)
 	{
-		putchar(c);
-		if (d != '9')
+		putchar(digit + '0');
+
+
+		if (digit != '9')
 		{
 			putchar(',');
 			putchar(' ');
