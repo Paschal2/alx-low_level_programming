@@ -3,26 +3,27 @@
  * main - A program that prints combinations
  * Return: Always 0 (Success)
  */
-int main(void)
-{
-	int e, o;
 
-	for (e = '0'; e < '9'; e++)
+int main(voi)
+{
+	int digit = 0;
+
+	while (digit < 10)
 	{
-		for (o = e + 1; o <= '9' p++)
+		int otherdigit = digit + 1;
+
+		while (otherdigit < 10)
 		{
-			if (o != e)
-			{
-			putchar(e);
-			putchar(o);
-			if (e == '8' && o == '9')
-				continue;
+			putchar(digit + '0');
+			putchar(otherdigit + '0');
 			putchar(',');
 			putchar(' ');
-			}
-		}
-	}
-	putchar('\n');
 
-	return (0);
+			otherdigit++;
+		}
+
+		digit++;
+	}
+
+	return (0)
 }
