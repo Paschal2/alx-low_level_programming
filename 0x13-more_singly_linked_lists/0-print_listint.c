@@ -1,21 +1,35 @@
-#include "lists.h"
+#include <stdio.h>
 
-/**
- * print_listint - prints all the elements of a linked list
- * @h: linked list of type listint_t to print
- *
- * Return: number of nodes
- */
-size_t print_listint(const listint_t *h)
-{
-	size_t num = 0;
+// Define the custom data structure for the linked list
+typedef struct listint_t {
+    int value;
+    struct listint_t* next;
+} listint_t;
 
-	while (h)
-	{
-		printf("%d\n", h->n);
-		num++;
-		h = h->next;
-	}
+// Function to print all elements of the linked list
+void print_list(listint_t* head) {
+    listint_t* current = head;
 
-	return (num);
+    while (current != NULL) {
+        printf("%d ", current->value);
+        current = current->next;
+    }
+
+    printf("\n");
+}
+
+// Example usage
+int main() {
+    // Create a sample linked list: 1 -> 2 -> 3 -> NULL
+    listint_t node1 = {1, NULL};
+    listint_t node2 = {2, NULL};
+    listint_t node3 = {3, NULL};
+
+    node1.next = &node2;
+    node2.next = &node3;
+
+    // Print the linked list
+    print_list(&node1);
+
+    return 0;
 }
